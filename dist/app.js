@@ -66,8 +66,8 @@ function contact(){
     e.preventDefault();if(!c.email||!e.target.reportValidity())return;
     const data=new FormData(e.target),name=String(data.get('name')).trim(),reply=String(data.get('email')).trim(),body=String(data.get('message')).trim();
     if(!name||body.length<10){document.querySelector('#contact-status').textContent='Please add your name and a message of at least 10 characters.';return}
-    const subject='Wordshift — '+data.get('topic');
-    const message='Name: '+name+'\nReply to: '+reply+'\nTopic: '+data.get('topic')+'\n\n'+body;
+    const subject='[Wordshift Game] '+data.get('topic');
+    const message='Source: Wordshift Game contact form\nWebsite: https://www.wordshift-game.online/\n\nName: '+name+'\nReply to: '+reply+'\nTopic: '+data.get('topic')+'\n\n'+body;
     location.href='mailto:'+encodeURIComponent(c.email)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message);
     document.querySelector('#contact-status').textContent='Your message has not been sent by this website. Finish sending in your email app; your form is still here if you need it.';
   });
