@@ -8,6 +8,9 @@ An original word transformation game: solve three connected clues by changing an
 - Daily rotation at midnight UTC; trails repeat every 17 days
 - Practice collection, hints, reveals, and answer explanations
 - Browser-local progress, streaks, statistics, and spoiler-free result sharing
+- Pregnancy-conscious daily ritual design with Gentle mode, rest days, and non-punitive progress
+- Three-stage hints, four-word chain progress, exact draft restoration, and supportive result types
+- Sound, haptics, reduced motion, high contrast, and adjustable text sizing
 - Responsive layout; no server, database, account, or API key required
 
 ## Deploy on Vercel
@@ -26,6 +29,8 @@ The website files are dist/index.html, dist/style.css, and dist/app.js. These ar
 Serve locally with `python3 -m http.server 8000 --directory dist` and open http://localhost:8000.
 
 Progress is stored in localStorage on each browser and origin. Progress from the original hosted site does not transfer automatically to a Vercel domain. Google Fonts is an external stylesheet dependency with system-font fallbacks.
+
+The current release preserves the existing `wordshift-v1` storage key and migrates older game records in place. New fields are added lazily so existing puzzle completion and statistics remain available.
 
 ## Contact and support
 
